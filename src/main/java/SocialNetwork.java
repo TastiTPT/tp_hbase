@@ -32,7 +32,7 @@ public class SocialNetwork {
 
 
             Table table = connection.getTable(TableName.valueOf("ntastevinHTable"));
-            // the name of my table created previously in hbase shell (create 'ntastevinHTable', 'info', 'friends'
+            // the name of my table created previously in hbase shell (create 'ntastevinHTable', 'info', 'friends')
             try {
 
 
@@ -44,7 +44,7 @@ public class SocialNetwork {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("What is your firstname?");
                 String firstname = sc.nextLine();
-                while(firstname.equals("")){ // to ensure the user types its firstname
+                while(firstname.equals("")){ // to ensure the user types his firstname
                     System.out.println("No firstname Typed. Please type your firstname!:  ");
                     firstname = sc.nextLine();
                 }
