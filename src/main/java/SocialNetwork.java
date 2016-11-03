@@ -6,6 +6,7 @@
 import java.io.IOException;
 import org.apache.hadoop.conf.Configuration;
 
+import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Connection;
@@ -16,6 +17,8 @@ import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 
+
+
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
@@ -25,7 +28,10 @@ import java.util.ArrayList;
 public class SocialNetwork {
     public static void main(String[] args) throws IOException {
 
+
         Configuration config = HBaseConfiguration.create();
+        config.addResource(new Path("/etc/hbase/conf/hbase-site.xml"));
+
 
         Connection connection = ConnectionFactory.createConnection(config);
         try {
