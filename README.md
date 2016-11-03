@@ -13,11 +13,18 @@ If they did not have a row id, then  rows id with the proper firstnames are crea
 
 
 
-### dependency
+## dependency
 ```
   org.apache.hbase.hbase-client.1.1.2
 ```
 
+## Installing
+
+On Intellij IDEA for example use the maven tool window
+
+```
+  maven package
+```
 
 ## Prerequisite
 
@@ -27,6 +34,16 @@ Assuming that a hbase table called <ntastevinHTable> has been previously created
 hbase shell > create 'ntastevinHTable', 'info', 'friends'
 
 ```
+
+## Running
+
+You need to specify the class path for hbase.
+
+```
+HADOOP_CLASSPATH=$(hbase classpath) hadoop jar tp_hbaseid-1.0-SNAPSHOT.jar SocialNetwork
+```
+
+
 
 ## Authors
 
